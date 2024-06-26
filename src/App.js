@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import Axios from "axios"
+import Bar from './components/layout/Bar';
+import { Dashboard } from './components/layout/Dashboard/Dashboard.js';
 
+
+const check = async() => {
+  try {
+    const response = await Axios.get('/');
+
+    if(response.status === 200){
+      console.log("success")
+    }
+  } catch (e) {
+    console.log(e);
+  }
+}
 function App() {
+  check();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Bar/>
+      <Dashboard/>
+      <p>여기는 본문</p>
     </div>
   );
 }
