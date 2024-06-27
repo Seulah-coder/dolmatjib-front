@@ -94,7 +94,7 @@ export default function Dashboard() {
     <ThemeProvider theme={defaultTheme}>
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
-        <AppBar position="absolute" open={open}>
+        <AppBar position="absolute" open={open} sx={{bgcolor: '#42B4E6'}}>
           <Toolbar
             sx={{
               pr: '24px', // keep right padding when drawer closed
@@ -119,7 +119,7 @@ export default function Dashboard() {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Dashboard
+              메뉴바~~~~~~~~
             </Typography>
             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
