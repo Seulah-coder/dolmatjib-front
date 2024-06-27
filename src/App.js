@@ -1,6 +1,5 @@
 import './App.css';
 import Axios from "axios"
-import Bar from './components/layout/Bar';
 import Dashboard from './components/layout/Dashboard/Dashboard';
 import { Fragment } from 'react';
 
@@ -23,7 +22,6 @@ function App() {
       <Fragment>
         <Dashboard/>
       </Fragment>
-      <p>여기는 본문</p>
     </div>
   );
 }
